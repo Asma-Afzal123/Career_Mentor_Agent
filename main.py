@@ -1,7 +1,3 @@
-# Streamlit version of Career Mentor Agent (Runs on localhost)
-import streamlit as st
-
-# Mock skill roadmap tool
 def get_career_roadmap(career: str) -> str:
     skill_data = {
         "Software Engineer": ["Python", "Data Structures", "Algorithms", "Git", "System Design"],
@@ -15,7 +11,6 @@ def get_career_roadmap(career: str) -> str:
     skills = skill_data.get(career, ["Skill info not available"])
     return f"Skills for {career}: " + ", ".join(skills)
 
-# Agent-like classes
 class CareerAgent:
     def suggest_career(self, interest: str):
         interest = interest.lower()
@@ -53,14 +48,12 @@ class JobAgent:
         }
         return jobs.get(career, ["No roles found"])
 
-# Streamlit UI
-st.set_page_config(page_title="Career Mentor Agent")
-st.title("🎓 Career Mentor Agent")
-st.write("Guide your future by discovering your ideal career path!")
+if __name__ == "__main__":
+    print("\n🎓 Career Mentor Agent")
+    print("Guide your future by discovering your ideal career path!\n")
 
-user_input = st.text_input("Tell us about your interests:", placeholder="e.g. I love designing, coding, teaching")
+    user_input = input("Tell us about your interests: ")
 
-if st.button("Find My Career Path"):
     career_agent = CareerAgent()
     skill_agent = SkillAgent()
     job_agent = JobAgent()
@@ -69,11 +62,11 @@ if st.button("Find My Career Path"):
     skills = skill_agent.get_skills(career)
     jobs = job_agent.get_jobs(career)
 
-    st.subheader("🎯 Career Path Suggested")
-    st.success(career)
+    print("\n🎯 Career Path Suggested:")
+    print(career)
 
-    st.subheader("📘 Skill Roadmap")
-    st.info(skills)
+    print("\n📘 Skill Roadmap:")
+    print(skills)
 
-    st.subheader("💼 Related Job Roles")
-    st.write(", ".join(jobs))
+    print("\n💼 Related Job Roles:")
+    print(", ".join(jobs))
