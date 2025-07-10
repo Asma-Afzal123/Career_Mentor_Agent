@@ -1,37 +1,24 @@
-# 🎓 Career Mentor Agent
+# 🎓 Career Mentor Agent (Terminal Version)
 
-A smart, beginner-friendly web app that helps students and job-seekers discover the best career paths based on their interests.
+This is a simple command-line based project to help users discover career paths based on their interests.
 
-🚀 Built using **Python + Streamlit**  
-🌐 Runs completely in your browser – **no installation required!**
+## 💡 What It Does
 
----
+- Suggests career options based on what the user types
+- Shows required skills for the selected career
+- Lists real-world job roles related to that field
 
-## 🔍 What It Does
+## 🧠 Agents Involved
 
-- 💡 Suggests the best **career path** based on your input
-- 📘 Shows a **skill roadmap** you need to succeed in that field
-- 💼 Recommends **job roles** related to the chosen career
-- 🔗 Easy-to-use web interface (no coding required)
-
----
-
-## 🌐 Try the Live App
-
-🖱️ Just click and start exploring:  
-👉 **[Launch the App](https://your-app-link.streamlit.app)** *(replace with real link)*
+- **CareerAgent**: Suggests career based on interest
+- **SkillAgent**: Shows skill roadmap
+- **JobAgent**: Lists possible job roles
 
 ---
 
-## 🛠 Technologies Used
+## ▶️ How to Run
 
-- [Python](https://www.python.org/)
-- [Streamlit](https://streamlit.io/)
-- Rule-based logic (no AI model required)
+### 1. Clone this repo:
 
----
-
-## 📸 Screenshot (optional)
-
-You can add a screenshot like this:
-
+```bash
+git clone https://github.com/Asma-Afzal123/Career_Mentor_Agent.git
